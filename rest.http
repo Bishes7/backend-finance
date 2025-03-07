@@ -1,2 +1,24 @@
-### GET Method
-GET http://localhost:8000
+
+### User 
+### GET Method 
+GET http://localhost:8000/api/v1/users
+
+### POST Method
+POST http://localhost:8000/api/v1/users
+Content-Type: application/json
+
+{
+    "name": "Bishes",
+    "email": "bishes@gmail.com",
+    "password": "dhading"
+}
+
+
+
+
+
+
+### Transactions
+
+
+
