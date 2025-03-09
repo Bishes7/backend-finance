@@ -6,8 +6,9 @@ const router = express.Router();
 
 // user signup
 router.post("/", async (req, res, next) => {
-  req.body.password = hashPassword(req.body.password);
   try {
+    // req.body.password = hashPassword(req.body.password);
+
     const users = await addUser(req.body);
 
     users?._id

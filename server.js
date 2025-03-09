@@ -1,6 +1,7 @@
 import express from "express";
-import router from "./routers/userRouter.js";
+import userRouter from "./routers/userRouter.js";
 import { connectDB } from "./DBconnect/DBCOnnect.js";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -8,10 +9,12 @@ const PORT = process.env.PORT || 8000;
 // MONGODB CONNECTION
 connectDB();
 
+app.use("/api/v1/users", userRouter);
+// CORS Middleware to access backend API
+app.use(cors());
+
 // coverted into json file using middleware
 app.use(express.json());
-// API EndPoints Defined by using middleware
-app.use("/api/v1/users", router);
 
 app.get("/", (req, res) => {
   res.json({

@@ -7,16 +7,19 @@ GET http://localhost:8000/api/v1/users
 POST http://localhost:8000/api/v1/users
 Content-Type: application/json
 
-{
-    "name": "Bishes",
-    "email": "bishes@gmail.com",
-    "password": "dhading"
+{"name": "Bishes",
+    "email": "specialbihes@gmal.com",
+    "password": "err"
 }
 
+### PUT 
+PUT http://localhost:8000/api/v1/users
 
-
-
-
+{
+    "name":"Umesh",
+    "email": "umesh@gmail.com",
+    "password":"err"
+}
 
 ### Transactions
 
