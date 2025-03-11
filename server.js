@@ -8,13 +8,13 @@ const PORT = process.env.PORT || 8000;
 
 // MONGODB CONNECTION
 connectDB();
-
-app.use("/api/v1/users", userRouter);
 // CORS Middleware to access backend API
 app.use(cors());
 
 // coverted into json file using middleware
 app.use(express.json());
+
+app.use("/api/v1/users", userRouter);
 
 app.get("/", (req, res) => {
   res.json({

@@ -7,7 +7,7 @@ const router = express.Router();
 // user signup
 router.post("/", async (req, res, next) => {
   try {
-    // req.body.password = hashPassword(req.body.password);
+    req.body.password = hashPassword(req.body.password);
 
     const users = await addUser(req.body);
 
@@ -21,9 +21,14 @@ router.post("/", async (req, res, next) => {
           message: "Error creating the account",
         });
   } catch (error) {
+    let msg = error.message;
+    if (msg.includes("E11000 duplicate key error collection")) {
+      msg =
+        "Account with this Email ID already exists, please try with different Email";
+    }
     res.json({
       status: "error",
-      message: error.message,
+      message: msg,
     });
   }
 });
