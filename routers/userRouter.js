@@ -34,6 +34,24 @@ router.post("/", async (req, res, next) => {
 });
 
 // user login
+router.post("/login", (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+    console.log(email, password);
+
+    if (email && password) {
+      res.json({
+        status: "success",
+        message: "user logined",
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      status: "error",
+      message: error.message,
+    });
+  }
+});
 
 // user profile
 

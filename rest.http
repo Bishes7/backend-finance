@@ -13,6 +13,18 @@ Content-Type: application/json
 }
 
 
+## User Login
+### POST Method
+POST http://localhost:8000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email":"specialbishes9@gmail.com",    
+    "password":"adamghat",
+    "dsf":"dsdsf"           
+}
+
+
 ### Transactions
 
 
