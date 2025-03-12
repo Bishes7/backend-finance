@@ -5,7 +5,7 @@ GET http://localhost:8000/api/v1/users
 
 ### POST Method
 POST http://localhost:8000/api/v1/users
-Content-Type: application/json
+Content-Type: application/json    
 
 {"name": "Bishes",
 "email": "specialbihes@gmal.com",
@@ -15,17 +15,13 @@ Content-Type: application/json
 
 ## User Login
 ### POST Method
-POST http://localhost:8000/api/v1/users/login
+POST http://localhost:8000/api/v1/users/login     
 Content-Type: application/json
 
 {
     "email":"specialbishes9@gmail.com",    
-    "password":"adamghat",
-    "dsf":"dsdsf"           
+    "password":""
+         
 }
-
-
 ### Transactions
-
-
 

@@ -36,15 +36,24 @@ router.post("/", async (req, res, next) => {
 // user login
 router.post("/login", (req, res, next) => {
   try {
+    // 1.  receive email and password
     const { email, password } = req.body;
-    console.log(email, password);
 
     if (email && password) {
       res.json({
         status: "success",
         message: "user logined",
       });
+      //  2. Find the user by email
+
+      // 3.Match the password of database and sent by client
+
+      // JWT token
+      return;
     }
+    res.status(401).json({
+      error: "Invalid login or password",
+    });
   } catch (error) {
     res.status(500).json({
       status: "error",
