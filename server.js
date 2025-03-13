@@ -6,6 +6,8 @@ import cors from "cors";
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+console.log(process.env.JWT_KEY);
+
 // MONGODB CONNECTION
 connectDB();
 // CORS Middleware to access backend API

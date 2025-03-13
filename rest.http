@@ -7,9 +7,9 @@ GET http://localhost:8000/api/v1/users
 POST http://localhost:8000/api/v1/users
 Content-Type: application/json    
 
-{"name": "Bishes",
-"email": "specialbihes@gmal.com",
-"password": "err"
+{"name": "kiran",
+"email": "kiran@gmal.com",
+"password": "aaa"
 }
 
 
@@ -19,9 +19,8 @@ POST http://localhost:8000/api/v1/users/login
 Content-Type: application/json
 
 {
-    "email":"specialbishes9@gmail.com",    
-    "password":""
-         
+    "email":"kiran@gmal.com",    
+    "password":"aaa"     
 }
 ### Transactions
 
