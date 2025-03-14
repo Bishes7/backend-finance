@@ -1,6 +1,7 @@
 import express from "express";
 import { addUser, getUserByEmail } from "../models/user/UserModels.js";
 import { comparePassword, hashPassword } from "../models/user/utils/bcrypt.js";
+import { signJWT } from "../models/user/utils/jwt.js";
 
 const router = express.Router();
 
@@ -47,11 +48,14 @@ router.post("/login", async (req, res, next) => {
         // 3.Match the password of database and sent by client
         const passwordMatched = comparePassword(password, user.password);
         if (passwordMatched) {
+          const accessToken = signJWT({ email });
+
           user.password = undefined;
           res.json({
             status: "success",
             message: "user logined",
             user,
+            accessToken,
           });
           return;
         }
