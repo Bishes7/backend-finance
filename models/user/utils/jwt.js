@@ -6,3 +6,13 @@ export const signJWT = (obj) => {
   });
   return token;
 };
+
+// Verifying the JWT Token
+
+export const VerifyJWT = (token) => {
+  try {
+    return jwt.verify(token, process.env.JWT_KEY);
+  } catch (error) {
+    return error.message;
+  }
+};

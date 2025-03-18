@@ -2,7 +2,8 @@
 ### User 
 ### GET Method 
 GET http://localhost:8000/api/v1/users
-
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDIyNzI1NjEsImV4cCI6MTc0MjM1ODk2MX0.VbCjKAKW68P2N8UNBQiq8keSDrhWSDHf4iTpf5FmTe
+    
 ### POST Method
 POST http://localhost:8000/api/v1/users
 Content-Type: application/json    
@@ -11,7 +12,7 @@ Content-Type: application/json
 "email": "kiran@gmal.com",
 "password": "aaa"
 }
-
+    
 
 ## User Login
 ### POST Method
@@ -19,8 +20,8 @@ POST http://localhost:8000/api/v1/users/login
 Content-Type: application/json
 
 {
-    "email":"kiran@gmal.com",    
-    "password":"aaa"     
+    "email":"kiranl@gmail.com",    
+    "password":"adamghat"       
 }
 ### Transactions
 

@@ -2,6 +2,7 @@ import express from "express";
 import { addUser, getUserByEmail } from "../models/user/UserModels.js";
 import { comparePassword, hashPassword } from "../models/user/utils/bcrypt.js";
 import { signJWT } from "../models/user/utils/jwt.js";
+import { auth } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -73,6 +74,20 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-// user profile
+// user profile from accessJWT
+router.get("/", auth, (req, res, next) => {
+  try {
+    const user = req.userInfo;
+    res.json({
+      status: "success",
+      message: "here is the user profile",
+      user,
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error.message,
+    });
+  }
+});
 
 export default router;
