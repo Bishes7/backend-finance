@@ -1,5 +1,5 @@
 import { getUserByEmail } from "../models/user/UserModels.js";
-import { VerifyJWT } from "../models/user/utils/jwt.js";
+import { VerifyJWT } from "../utils/jwt.js";
 
 export const auth = async (req, res, next) => {
   try {

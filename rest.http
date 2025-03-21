@@ -2,7 +2,7 @@
 ### User 
 ### GET Method 
 GET http://localhost:8000/api/v1/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDIyNzI1NjEsImV4cCI6MTc0MjM1ODk2MX0.VbCjKAKW68P2N8UNBQiq8keSDrhWSDHf4iTpf5FmTe
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDIyNzI1NjEsImV4cCI6MTc0MjM1ODk2MX0.VbCjKAKW68P2N8UNBQiq8keSDrhWSDHf4iTpf5FmTeM   
     
 ### POST Method
 POST http://localhost:8000/api/v1/users
@@ -24,4 +24,16 @@ Content-Type: application/json
     "password":"adamghat"       
 }
 ### Transactions
+
+### Post Transaction
+POST http://localhost:8000/api/v1/transactions
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDI1NjA1MTEsImV4cCI6MTc0MjY0NjkxMX0.le2XH2VcJZOInNbrBRYwDrL0mWg80GVXe5RBwbBLezM
+
+{
+    "income":"salary",
+    "title":"expense",
+    "amount":6666
+}
+
 
