@@ -28,12 +28,12 @@ Content-Type: application/json
 ### Post Transaction
 POST http://localhost:8000/api/v1/transactions
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDI1NjA1MTEsImV4cCI6MTc0MjY0NjkxMX0.le2XH2VcJZOInNbrBRYwDrL0mWg80GVXe5RBwbBLezM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDI3MDc4ODAsImV4cCI6MTc0Mjc5NDI4MH0.MTD8fXmVPGZF5k8UhkiK0ypVdkcOJi_ZG1QXjq7nbIo
 
 {
-    "income":"salary",
-    "title":"expense",
-    "amount":6666
+    "title":"salary",
+    "amount":333,
+    "tdate":"2022-09-22"
 }
 
 
