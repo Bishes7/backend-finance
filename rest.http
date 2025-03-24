@@ -37,3 +37,6 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFp
 }
 
 
+### Get Transaction
+GET http://localhost:8000/api/v1/transactions
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDI3NjE2MjksImV4cCI6MTc0Mjg0ODAyOX0.ZGBQY4k2tYB8G8YHq5GPCDojjn0hCGwRH3cXNX4Copg
