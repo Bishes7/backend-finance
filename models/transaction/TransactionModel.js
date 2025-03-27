@@ -11,3 +11,8 @@ export const insertTransaction = (obj) => {
 export const getTransaction = (userid) => {
   return TransactionSchema.find({ userid });
 };
+
+// Delete Method
+export const deleteTransactions = (userid, idsToDelete) => {
+  return TransactionSchema.deleteMany({ userid, _id: { $in: idsToDelete } });
+};

@@ -2,15 +2,15 @@
 ### User 
 ### GET Method 
 GET http://localhost:8000/api/v1/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDIyNzI1NjEsImV4cCI6MTc0MjM1ODk2MX0.VbCjKAKW68P2N8UNBQiq8keSDrhWSDHf4iTpf5FmTeM   
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDI5OTg3NTQsImV4cCI6MTc0MzA4NTE1NH0.I7Qf_2BoCVw07dMTR5LtNO_r0CYLGyLTKIEiKlS__to   
     
 ### POST Method
 POST http://localhost:8000/api/v1/users
 Content-Type: application/json    
 
-{"name": "kiran",
-"email": "kiran@gmal.com",
-"password": "aaa"
+{"name": "Sameer",
+"email": "sameer@gmal.com",
+"password": "dhading"
 }
     
 
@@ -38,5 +38,13 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFp
 
 
 ### Get Transaction
-GET http://localhost:8000/api/v1/transactions
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDI3NjE2MjksImV4cCI6MTc0Mjg0ODAyOX0.ZGBQY4k2tYB8G8YHq5GPCDojjn0hCGwRH3cXNX4Copg
+GET http://localhost:8000/api/v1/transactions 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDI5OTg3NTQsImV4cCI6MTc0MzA4NTE1NH0.I7Qf_2BoCVw07dMTR5LtNO_r0CYLGyLTKIEiKlS__to
+
+### Delete Transaction
+DELETE  http://localhost:8000/api/v1/transactions 
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtpcmFubEBnbWFpbC5jb20iLCJpYXQiOjE3NDI5OTg3NTQsImV4cCI6MTc0MzA4NTE1NH0.I7Qf_2BoCVw07dMTR5LtNO_r0CYLGyLTKIEiKlS__to
+
+["67e15b95d4464aeb6121f7e3"]
+
