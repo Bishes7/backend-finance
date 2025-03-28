@@ -4,6 +4,7 @@ import { connectDB } from "./DBconnect/DBCOnnect.js";
 import cors from "cors";
 import transactionRouter from "./routers/transactionRouter.js";
 import { auth } from "./middleware/authMiddleware.js";
+import { errorHandler } from "./middleware/ErrorHandler.js";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -27,6 +28,17 @@ app.get("/", (req, res) => {
     message: "Its live NOW",
   });
 });
+
+// ERROR HANDLING LOGICS
+// 404 page not found
+app.use((req, res, next) => {
+  const error = new Error("not found");
+  error.statusCode = 404;
+  next(error);
+});
+
+// Global error Handler
+app.use(errorHandler);
 
 app.listen(PORT, (error) => {
   error ? console.log(error) : console.log(`http://localhost:${PORT}`);

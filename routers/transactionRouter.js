@@ -23,12 +23,12 @@ router.post("/", async (req, res, next) => {
           message: error.message,
         });
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 });
 
 // Get Transaction
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
   try {
     const { _id } = req.userInfo;
     const transaction = (await getTransaction(_id)) || [];
@@ -39,12 +39,12 @@ router.get("/", async (req, res) => {
       transaction,
     });
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 });
 
 // Delete Transaction
-router.delete("/", async (req, res) => {
+router.delete("/", async (req, res, next) => {
   try {
     // receive[ids] and _id of the user
     const ids = req.body;
@@ -53,18 +53,13 @@ router.delete("/", async (req, res) => {
 
     // perform the deletion query
 
-    const deletedTransactions = await deleteTransactions(_id, ids);
+    const result = await deleteTransactions(_id, ids);
     res.json({
       status: "success",
-      message:
-        deletedTransactions.deletedCount + " transactions has been deleted",
+      message: result.deletedCount + " transactions has been deleted",
     });
   } catch (error) {
-    console.log(error);
-    res.json({
-      status: "error",
-      message: error.message,
-    });
+    next(error);
   }
 });
 

@@ -67,10 +67,7 @@ router.post("/login", async (req, res, next) => {
       error: "Invalid login or password",
     });
   } catch (error) {
-    res.status(500).json({
-      status: "error",
-      message: error.message,
-    });
+    next(error);
   }
 });
 
@@ -84,9 +81,7 @@ router.get("/", auth, (req, res, next) => {
       user,
     });
   } catch (error) {
-    res.status(500).json({
-      error: error.message,
-    });
+    next(error);
   }
 });
 
