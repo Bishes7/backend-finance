@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const mongoURl = "mongodb://127.0.0.1:27017/financeTracker";
+const mongoURl = process.env.MONGO_URL;
 
 export const connectDB = async () => {
   try {

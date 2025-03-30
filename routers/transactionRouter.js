@@ -49,7 +49,6 @@ router.delete("/", async (req, res, next) => {
     // receive[ids] and _id of the user
     const ids = req.body;
     const { _id } = req.userInfo; // this is user id
-    console.log(ids, _id);
 
     // perform the deletion query
 

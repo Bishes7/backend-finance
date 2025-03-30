@@ -54,7 +54,7 @@ router.post("/login", async (req, res, next) => {
           user.password = undefined;
           res.json({
             status: "success",
-            message: "user logined",
+            message: "Login Successful ",
             user,
             accessToken,
           });
