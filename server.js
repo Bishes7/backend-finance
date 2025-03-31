@@ -7,7 +7,7 @@ import { auth } from "./middleware/authMiddleware.js";
 import { errorHandler } from "./middleware/ErrorHandler.js";
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 10000;
 
 // MONGODB CONNECTION
 connectDB();
