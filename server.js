@@ -1,6 +1,6 @@
 import express from "express";
 import userRouter from "./routers/userRouter.js";
-import { connectDB } from "./DBconnect/DBCOnnect.js";
+import { connectDB } from "./DBconnect/DBConnect.js";
 import cors from "cors";
 import transactionRouter from "./routers/transactionRouter.js";
 import { auth } from "./middleware/authMiddleware.js";
